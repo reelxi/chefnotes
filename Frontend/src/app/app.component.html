@@ -8,8 +8,13 @@
       </ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-content>
+    <ion-router-outlet></ion-router-outlet>
+  </ion-content>
   <ion-footer>
+    <ion-button id="add-recipe-button">
+      <ion-icon name="add" size="large" slot="icon-only"></ion-icon>
+    </ion-button>
     <ion-toolbar>
       <ion-title slot="end">&copy; ChefNotes 2024</ion-title>
     </ion-toolbar>
