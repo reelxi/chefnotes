@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {IonicModule} from "@ionic/angular";
 import {add, fastFoodSharp} from "ionicons/icons";
 import {addIcons} from "ionicons";
 import {
