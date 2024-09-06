@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {IonicModule} from "@ionic/angular";
 import {
   IonCard,
   IonCardContent,
