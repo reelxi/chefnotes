@@ -1,11 +1,4 @@
-import {
-  Column,
-  Entity,
-  Generated,
-  ManyToOne,
-  PrimaryColumn,
-  PrimaryGeneratedColumn,
-} from 'typeorm';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { Recipe } from '../recipe/recipe.entity';
 
 @Entity()
