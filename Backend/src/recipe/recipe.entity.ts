@@ -1,6 +1,7 @@
 import {
   Column,
   Entity,
+  JoinColumn,
   ManyToOne,
   OneToOne,
   PrimaryGeneratedColumn,
@@ -22,6 +23,7 @@ export class Recipe {
   estimatedTimeMinutes: number;
 
   @OneToOne('IngredientNutritionalValue')
+  @JoinColumn()
   recipeNutritionalValue: IngredientNutritionalValue;
 
   @ManyToOne('DietType')

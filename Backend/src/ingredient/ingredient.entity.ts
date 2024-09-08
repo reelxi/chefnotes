@@ -1,6 +1,7 @@
 import {
   Column,
   Entity,
+  JoinColumn,
   ManyToOne,
   OneToOne,
   PrimaryGeneratedColumn,
@@ -17,6 +18,7 @@ export class Ingredient {
   name: string;
 
   @OneToOne('IngredientNutritionalValue')
+  @JoinColumn()
   ingredientNutritionalValue: IngredientNutritionalValue;
 
   @ManyToOne('IngredientCategory')
