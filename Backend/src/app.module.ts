@@ -11,6 +11,8 @@ import { IngredientNutritionalValue } from './ingredient_nutritional_value/ingre
 import { Ingredient } from './ingredient/ingredient.entity';
 import { InstructionStep } from './instruction_step/instruction_step.entity';
 import { RecipeIngredient } from './recipe_ingredient/recipe_ingredient.entity';
+import { UserController } from './user/user.controller';
+import { UserService } from './user/user.service';
 
 @Module({
   imports: [
@@ -38,7 +40,7 @@ import { RecipeIngredient } from './recipe_ingredient/recipe_ingredient.entity';
       synchronize: true,
     }),
   ],
-  controllers: [],
-  providers: [],
+  controllers: [UserController],
+  providers: [UserService],
 })
 export class AppModule {}
