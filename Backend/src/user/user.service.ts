@@ -9,43 +9,47 @@ import { User } from './user.entity';
  */
 @Injectable()
 export class UserService {
+  /**
+   * Constructs the UserService and injects the TypeORM User repository.
+   * @param userRepository - Repository for User entity database operations
+   */
   constructor(
     @InjectRepository(User)
     private readonly userRepository: Repository<User>,
   ) {}
 
   /**
-   * Creates and saves a new user entity to the database.
-   * @param user - User entity containing data to save
-   * @returns A promise resolving to the saved User entity
+   * Creates and persists a new User entity in the database.
+   * @param user - The user entity containing user details
+   * @returns The created user entity after saving to the database
    */
   async create(user: User): Promise<User> {
     return this.userRepository.save(user);
   }
 
   /**
-   * Retrieves all user entities from the database.
-   * @returns A promise resolving to an array of User entities
+   * Retrieves all User entities stored in the database.
+   * @returns An array containing all user entities
    */
   async findAll(): Promise<User[]> {
     return this.userRepository.find();
   }
 
   /**
-   * Retrieves a single user entity by its ID.
-   * @param id - ID of the user to retrieve
-   * @returns A promise resolving to the User entity if found, otherwise undefined
+   * Finds and returns a User entity based on the provided ID.
+   * @param id - Unique identifier of the user
+   * @returns The user entity if found, otherwise undefined
    */
-  async findOne(id: number): Promise<User> {
+  async findOne(id: string): Promise<User> {
     return this.userRepository.findOneBy({ id });
   }
 
   /**
-   * Removes a user entity from the database based on its ID.
-   * @param id - ID of the user to remove
-   * @returns A promise resolving when the removal operation is complete
+   * Deletes a user entity from the database by the specified ID.
+   * @param id - Unique identifier of the user to delete
+   * @returns Resolves when the deletion is successfully completed
    */
-  async remove(id: number): Promise<void> {
+  async remove(id: string): Promise<void> {
     await this.userRepository.delete(id);
   }
 }
