@@ -33,6 +33,7 @@ import { InstructionStepService } from './instruction_step/instruction_step.serv
   imports: [
     // Database connection configuration (once, centrally)
     TypeOrmModule.forRoot({
+      url: process.env.DB_URL,
       type: 'postgres',
       host: 'localhost',
       port: 5432,
