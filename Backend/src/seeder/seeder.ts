@@ -217,7 +217,7 @@ async function bootstrap() {
     // Check if ingredient exists or create it
     let ingredient = ingredients.find((i) => i.name === entry.name);
     if (!ingredient) {
-      const nutri = await ingValueService.create({
+      const nutrition = await ingValueService.create({
         energy: 100,
         fat: 5,
         saturatedFat: 1,
@@ -229,7 +229,7 @@ async function bootstrap() {
       ingredient = await ingredientService.create({
         name: entry.name,
         ingredientCategory: faker.helpers.arrayElement(categories),
-        ingredientNutritionalValue: nutri,
+        ingredientNutritionalValue: nutrition,
       });
       ingredients.push(ingredient);
     }
@@ -249,4 +249,4 @@ async function bootstrap() {
   await app.close();
 }
 
-bootstrap();
+bootstrap().then();
