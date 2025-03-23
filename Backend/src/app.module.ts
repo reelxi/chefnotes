@@ -35,14 +35,14 @@ import { InstructionStepService } from './instruction_step/instruction_step.serv
     TypeOrmModule.forRoot({
       type: 'postgres',
       url: process.env.DATABASE_URL,
-      synchronize: true, // only for development!
-      autoLoadEntities: true,
       ssl: true,
       extra: {
         ssl: {
           rejectUnauthorized: false,
         },
       },
+      synchronize: true, // only for development!
+      autoLoadEntities: true,
     }),
     DatabaseModule, // Includes entities and repositories
   ],
