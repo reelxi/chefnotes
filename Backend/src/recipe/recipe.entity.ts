@@ -19,7 +19,7 @@ import { IngredientNutritionalValue } from '../ingredient_nutritional_value/ingr
 @Entity()
 export class Recipe {
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id?: string;
 
   @Column({ unique: true })
   title: string;

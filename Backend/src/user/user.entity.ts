@@ -11,7 +11,7 @@ export class User {
    * Auto-generated unique identifier for the user.
    */
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id?: string;
 
   /**
    * Unique username for the user.

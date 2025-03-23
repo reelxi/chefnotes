@@ -10,7 +10,7 @@ export class InstructionStep {
    * Unique identifier for the instruction step (UUID).
    */
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id?: string;
 
   /**
    * The position of the step within the full instruction list (e.g., 1, 2, 3).

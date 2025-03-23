@@ -13,7 +13,7 @@ export class RecipeIngredient {
    * Auto-incrementing primary key for the recipe-ingredient relation.
    */
   @PrimaryGeneratedColumn()
-  id: number;
+  id?: number;
 
   /**
    * The recipe that uses this ingredient.

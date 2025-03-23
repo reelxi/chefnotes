@@ -9,7 +9,7 @@ export class Difficulty {
    * Unique identifier for the difficulty level (UUID).
    */
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id?: string;
 
   /**
    * Unique name of the difficulty level.

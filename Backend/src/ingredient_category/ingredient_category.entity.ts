@@ -9,7 +9,7 @@ export class IngredientCategory {
    * Unique identifier for the ingredient category (UUID).
    */
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id?: string;
 
   /**
    * Unique name of the ingredient category.

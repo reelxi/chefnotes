@@ -9,7 +9,7 @@ export class Unit {
    * Unique identifier for the unit (UUID).
    */
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id?: string;
 
   /**
    * Unique name of the unit.

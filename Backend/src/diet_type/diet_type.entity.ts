@@ -9,7 +9,7 @@ export class DietType {
    * Unique identifier for the diet type (UUID).
    */
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id?: string;
 
   /**
    * Unique name of the diet type.

@@ -10,7 +10,7 @@ export class IngredientNutritionalValue {
    * Unique identifier for the nutritional value record (UUID).
    */
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id?: string;
 
   /**
    * Energy content in kilocalories (kcal).

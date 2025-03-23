@@ -10,7 +10,7 @@ export class Role {
    * Unique identifier for the role (UUID).
    */
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id?: string;
 
   /**
    * Name of the role (must be unique).

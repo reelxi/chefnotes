@@ -18,7 +18,7 @@ export class Ingredient {
    * Unique identifier for the ingredient (UUID).
    */
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id?: string;
 
   /**
    * Name of the ingredient.
