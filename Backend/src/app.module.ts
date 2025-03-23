@@ -33,13 +33,12 @@ import { InstructionStepService } from './instruction_step/instruction_step.serv
   imports: [
     // Database connection configuration (once, centrally)
     TypeOrmModule.forRoot({
-      url: process.env.DB_URL,
       type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'nestjs',
-      password: 'nestjs',
-      database: 'nestjs',
+      host: process.env.DB_HOST || 'localhost',
+      port: parseInt(process.env.DB_PORT || '5432'),
+      username: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME,
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true, // only for development!
     }),
