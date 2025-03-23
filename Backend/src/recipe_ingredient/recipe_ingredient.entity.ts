@@ -30,7 +30,7 @@ export class RecipeIngredient {
   /**
    * Amount of the ingredient required in the recipe.
    */
-  @Column()
+  @Column({ type: 'float' })
   amount: number;
 
   /**

@@ -15,42 +15,42 @@ export class IngredientNutritionalValue {
   /**
    * Energy content in kilocalories (kcal).
    */
-  @Column()
+  @Column({ type: 'int' })
   energy: number;
 
   /**
    * Total fat in grams.
    */
-  @Column()
+  @Column({ type: 'float' })
   fat: number;
 
   /**
    * Saturated fat in grams.
    */
-  @Column()
+  @Column({ type: 'float' })
   saturatedFat: number;
 
   /**
    * Carbohydrates in grams.
    */
-  @Column()
+  @Column({ type: 'float' })
   carbohydrates: number;
 
   /**
    * Sugar in grams.
    */
-  @Column()
+  @Column({ type: 'float' })
   sugar: number;
 
   /**
    * Protein content in grams.
    */
-  @Column()
+  @Column({ type: 'float' })
   protein: number;
 
   /**
    * Salt content in grams.
    */
-  @Column()
+  @Column({ type: 'float' })
   salt: number;
 }
