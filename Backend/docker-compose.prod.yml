@@ -1,0 +1,30 @@
+version: '3.9'
+services:
+  backend:
+    container_name: chefnotes-backend-prod
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=production
+    command: node dist/main.js
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:15
+    container_name: chefnotes-db-prod
+    restart: always
+    environment:
+      POSTGRES_DB: nestjs
+      POSTGRES_USER: nestjs
+      POSTGRES_PASSWORD: nestjs
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
