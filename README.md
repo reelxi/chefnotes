@@ -7,6 +7,13 @@ Along the way, it became a fullstack learning project with modern web technologi
 
 ---
 
+🚀 Live Demo
+You can explore the deployed ChefNotes app here:
+
+👉 [**DEMO**](https://chefnotes-dhu1.onrender.com)
+
+---
+
 ## 🛠 Tech Stack
 
 - [**Ionic**](https://github.com/ionic-team/ionic-framework) – to bring the app to Android and iOS 📱 *(new to me)*
