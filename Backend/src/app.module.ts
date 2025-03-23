@@ -14,10 +14,22 @@ import { RecipeIngredient } from './recipe_ingredient/recipe_ingredient.entity';
 import { UserController } from './user/user.controller';
 import { UserService } from './user/user.service';
 
+/**
+ * Root module of the NestJS application.
+ * Responsible for configuring and initializing the main aspects of the application,
+ * including database connection settings, importing entity definitions,
+ * registering controllers, and providers.
+ */
 @Module({
   imports: [
+    /**
+     * Configures the database connection using TypeORM.
+     * Connects to a PostgreSQL database with provided credentials.
+     * Registers entities that represent database tables for ORM.
+     * The 'synchronize: true' option automatically creates and updates tables
+     * based on entity definitions (recommended only for development).
+     */
     TypeOrmModule.forRoot({
-      // configure database connection
       type: 'postgres',
       host: 'localhost',
       port: 5432,
@@ -40,7 +52,16 @@ import { UserService } from './user/user.service';
       synchronize: true,
     }),
   ],
+  /**
+   * Registers controllers that handle incoming HTTP requests
+   * and define application routes.
+   */
   controllers: [UserController],
+
+  /**
+   * Registers providers (services) to encapsulate business logic
+   * and to be injected into controllers or other services.
+   */
   providers: [UserService],
 })
 export class AppModule {}
