@@ -1,4 +1,7 @@
-We split application requirements and break down the application into features, which are called Feature Based Architectures. We should create a separate sub-module for every feature under src/app/features/ module. This makes your code independent, with a single responsibility focused on specific features.
+We split application requirements and break down the application into features, which are called Feature Based Architectures.
+We should create a separate sub-module for every feature under src/app/features/ module.
+This makes your code independent, with a single responsibility focused on specific features.
 
 
-Suppose we are building a healthcare application. We must have features for appointments, prescriptions, patients, payments, etc.
+Suppose we are building a healthcare application.
+We must have features for appointments, prescriptions, patients, payments, etc.
